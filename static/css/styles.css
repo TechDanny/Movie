@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.navbar-brand .cine {
+    color: #17a2b8;
+}
+
+.navbar-brand .max {
+    display: inline-block;
+    color: #ffc107;
+    font-family: 'Your-Font-Here', sans-serif;
+    background-color: #17a2b8;
+    border-radius: 50%;
+    padding: 0.2em 0.5em;
+    
+}
+.card-img-overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s;
+    height: 100%;
+}
+
+.card:hover .card-img-overlay {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.play-button {
+    width: 45px;
+    color: white;
+    transition: color 0.3s;
+}
