@@ -33,8 +33,10 @@ def search():
     cur.execute("SELECT * FROM movies WHERE name LIKE %s", ('%' + search_query + '%',))
     search_result = cur.fetchall()
     cur.close()
-
-    return render_template('search.html', search_result=search_result, query=search_query)
+    title = None
+    for movie in search_result:
+        title = movie['name']
+    return render_template('search.html', search_result=search_result, query=search_query, title=title)
 
 if __name__ == '__main__':
     app.run(debug=True)
